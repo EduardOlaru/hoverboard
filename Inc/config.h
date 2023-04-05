@@ -14,7 +14,7 @@
   //#define VARIANT_USART       // Variant for Serial control via USART3 input
   //#define VARIANT_NUNCHUK     // Variant for Nunchuk controlled vehicle build
   //#define VARIANT_PPM         // Variant for RC-Remote with PPM-Sum Signal
-  //#define VARIANT_PWM         // Variant for RC-Remote with PWM Signal
+  //#define VARIANT_PWM         // Variant for RC-Remote with PWM Signal test
   //#define VARIANT_IBUS        // Variant for RC-Remotes with FLYSKY IBUS
   //#define VARIANT_HOVERCAR    // Variant for HOVERCAR build
   //#define VARIANT_HOVERBOARD  // Variant for HOVERBOARD build
@@ -73,9 +73,9 @@
  * Then you can verify voltage on debug output value 6 (to get calibrated voltage multiplied by 100).
 */
 #define BAT_FILT_COEF           655       // battery voltage filter coefficient in fixed-point. coef_fixedPoint = coef_floatingPoint * 2^16. In this case 655 = 0.01 * 2^16
-#define BAT_CALIB_REAL_VOLTAGE  3970      // input voltage measured by multimeter (multiplied by 100). In this case 43.00 V * 100 = 4300
-#define BAT_CALIB_ADC           1492      // adc-value measured by mainboard (value nr 5 on UART debug output)
-#define BAT_CELLS               10        // battery number of cells. Normal Hoverboard battery: 10s
+#define BAT_CALIB_REAL_VOLTAGE  2900     // input voltage measured by multimeter (multiplied by 100). In this case 43.00 V * 100 = 4300
+#define BAT_CALIB_ADC           1156      // adc-value measured by mainboard (value nr 5 on UART debug output)
+#define BAT_CELLS               7        // battery number of cells. Normal Hoverboard battery: 10s
 #define BAT_LVL2_ENABLE         0         // to beep or not to beep, 1 or 0
 #define BAT_LVL1_ENABLE         1         // to beep or not to beep, 1 or 0
 #define BAT_DEAD_ENABLE         1         // to poweroff or not to poweroff, 1 or 0
@@ -267,7 +267,7 @@
 /* CONTROL VIA TWO POTENTIOMETERS
  * Connect potis to left sensor board cable (0 to 3.3V) (do NOT use the red 15V wire!)
  *
- * Auto-calibration of the ADC Limit to finds the Minimum, Maximum, and Middle for the ADC input
+ * Auto-calibration of the ADC Limit to finds the Minimum, Maximum, and Middle for the ADC input //
  * Procedure:
  * - press the power button for more than 5 sec and release after the beep sound
  * - move the potentiometers freely to the min and max limits repeatedly
